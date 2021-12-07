@@ -26,8 +26,11 @@ require_once ALTSLOGO_PATH . '/src/block/index.php';
 // require ALTSLOGO_PATH . '/inc/class-altslogo-config.php';
 // $altslogo_config = new Altslogo_Config();
 
-
+/**
+ * Filter to add SVGs to upload mime types.
+ */
 add_filter( 'upload_mimes', function ( $mimes ) {
 	$mimes['svg']  = 'image/svg+xml';
+	$mimes['svgz']  = 'image/svg+xml';
 	return $mimes;
 } );
