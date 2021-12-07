@@ -1,9 +1,9 @@
 //import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
-export default function save( {attributes} ) {
+export default function save({ attributes }) {
 	const { url } = attributes;
-	if (!url ) {
+	if (!url) {
 		return null;
 	}
 	return (
