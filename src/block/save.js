@@ -1,7 +1,11 @@
 //import { __ } from '@wordpress/i18n';
 import { useBlockProps } from '@wordpress/block-editor';
 
-export default function save() {
+export default function save( {attributes} ) {
+	const { url } = attributes;
+	if (!url ) {
+		return null;
+	}
 	return (
 		// <p { ...useBlockProps.save() }>
 		// 	{ __(
@@ -9,6 +13,8 @@ export default function save() {
 		// 		'alternative-site-logo'
 		// 	) }
 		// </p>
-		<div {...useBlockProps.save()}></div>
+		<div {...useBlockProps.save()}>
+			<img src={url} alt="" />
+		</div>
 	);
 }

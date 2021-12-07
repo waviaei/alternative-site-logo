@@ -8,6 +8,11 @@
 	"icon": "smiley",
 	"description": "Example block written with ESNext standard and JSX support – build step required.",
 	"keywords": [ "logo" ],
+  	"attributes": {
+	  "url": {
+		"type": "string"
+	  }
+	},
 	"supports": {
 		"anchor": true,
 		"html": false,

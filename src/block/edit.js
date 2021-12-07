@@ -1,5 +1,5 @@
 //import { __ } from '@wordpress/i18n';
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, MediaPlaceholder } from '@wordpress/block-editor';
 import './editor.scss';
 
 // renderメソッドのインポート
@@ -11,7 +11,8 @@ import { TextControl, Button } from '@wordpress/components';
 // const [rowSvg, setText] = useState('初期値');
 // const [outputSVG, setOutputSVG] = useState();
 
-export default function edit() {
+export default function Edit({ setAttributes, attributes }) {
+	const { url } = attributes;
 	return (
 		// <p { ...useBlockProps() }>
 		// 	{ __(
@@ -20,6 +21,16 @@ export default function edit() {
 		// 	) }
 		// </p>
 		<div {...useBlockProps()}>
+			{url ? (
+				<img src={url} alt="" />
+			) : (
+				<MediaPlaceholder
+					onSelect={(el) => {
+						setAttributes({ url: el.url });
+					}}
+					allowedTypes={['image/svg+xml']}
+				/>
+			)}
 			{/* <TextControl
 				label="Logo SVG Tags"
 				value={rowSvg}

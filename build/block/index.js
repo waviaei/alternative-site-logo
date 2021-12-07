@@ -8,7 +8,9 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./src/block/style.scss?");
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
 
 /***/ })
 
@@ -171,19 +173,149 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/block/index.js":
-/*!****************************************!*\
-  !*** ./src/block/index.js + 3 modules ***!
-  \****************************************/
-/*! no exports provided */
-/*! ModuleConcatenation bailout: Cannot concat with ./src/block/style.scss */
-/*! ModuleConcatenation bailout: Cannot concat with external ["wp","blockEditor"] (<- Module is not an ECMAScript module) */
-/*! ModuleConcatenation bailout: Cannot concat with external ["wp","blocks"] (<- Module is not an ECMAScript module) */
-/*! ModuleConcatenation bailout: Cannot concat with external ["wp","element"] (<- Module is not an ECMAScript module) */
+/***/ "./src/block/edit.js":
+/*!***************************!*\
+  !*** ./src/block/edit.js ***!
+  \***************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("// ESM COMPAT FLAG\n__webpack_require__.r(__webpack_exports__);\n\n// EXTERNAL MODULE: external [\"wp\",\"blocks\"]\nvar external_wp_blocks_ = __webpack_require__(\"@wordpress/blocks\");\n\n// EXTERNAL MODULE: external [\"wp\",\"element\"]\nvar external_wp_element_ = __webpack_require__(\"@wordpress/element\");\n\n// EXTERNAL MODULE: external [\"wp\",\"blockEditor\"]\nvar external_wp_blockEditor_ = __webpack_require__(\"@wordpress/block-editor\");\n\n// CONCATENATED MODULE: ./src/block/editor.scss\n// extracted by mini-css-extract-plugin\n\n// EXTERNAL MODULE: external [\"wp\",\"components\"]\nvar external_wp_components_ = __webpack_require__(\"@wordpress/components\");\n\n// CONCATENATED MODULE: ./src/block/edit.js\n\n//import { __ } from '@wordpress/i18n';\n\n // renderメソッドのインポート\n\n // Componentのインポート\n\n // stateの初期値設定\n// const [rowSvg, setText] = useState('初期値');\n// const [outputSVG, setOutputSVG] = useState();\n\nfunction edit() {\n  return (// <p { ...useBlockProps() }>\n    // \t{ __(\n    // \t\t'Alternative Site Logo – hello from the editor!',\n    // \t\t'alternative-site-logo'\n    // \t) }\n    // </p>\n    Object(external_wp_element_[\"createElement\"])(\"div\", Object(external_wp_blockEditor_[\"useBlockProps\"])())\n  );\n}\n// CONCATENATED MODULE: ./src/block/save.js\n\n//import { __ } from '@wordpress/i18n';\n\nfunction save() {\n  return (// <p { ...useBlockProps.save() }>\n    // \t{ __(\n    // \t\t'Alternative Site Logo – hello from the saved content!',\n    // \t\t'alternative-site-logo'\n    // \t) }\n    // </p>\n    Object(external_wp_element_[\"createElement\"])(\"div\", external_wp_blockEditor_[\"useBlockProps\"].save())\n  );\n}\n// EXTERNAL MODULE: ./src/block/style.scss\nvar style = __webpack_require__(\"./src/block/style.scss\");\n\n// CONCATENATED MODULE: ./src/block/index.js\n/**\n * WordPress dependencies\n */\n\n/**\n * Internal dependencies\n */\n// import metadata from './block.json';\n\n\n\n\nObject(external_wp_blocks_[\"registerBlockType\"])('alternative-site-logo/alternative-site-logo', {\n  // ...metadata,\n  edit: edit,\n  save: save\n});\n\n//# sourceURL=webpack:///./src/block/index.js_+_3_modules?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Edit; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _editor_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./editor.scss */ "./src/block/editor.scss");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @wordpress/components */ "@wordpress/components");
+/* harmony import */ var _wordpress_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_wordpress_components__WEBPACK_IMPORTED_MODULE_3__);
+
+//import { __ } from '@wordpress/i18n';
+
+ // renderメソッドのインポート
+
+ // Componentのインポート
+
+ // stateの初期値設定
+// const [rowSvg, setText] = useState('初期値');
+// const [outputSVG, setOutputSVG] = useState();
+
+function Edit({
+  setAttributes,
+  attributes
+}) {
+  const {
+    url
+  } = attributes;
+  return (// <p { ...useBlockProps() }>
+    // 	{ __(
+    // 		'Alternative Site Logo – hello from the editor!',
+    // 		'alternative-site-logo'
+    // 	) }
+    // </p>
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", Object(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"])(), url ? Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      src: url,
+      alt: ""
+    }) : Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["MediaPlaceholder"], {
+      onSelect: el => {
+        setAttributes({
+          url: el.url
+        });
+      },
+      allowedTypes: ['image/svg+xml']
+    }))
+  );
+}
+
+/***/ }),
+
+/***/ "./src/block/editor.scss":
+/*!*******************************!*\
+  !*** ./src/block/editor.scss ***!
+  \*******************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/block/index.js":
+/*!****************************!*\
+  !*** ./src/block/index.js ***!
+  \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
+/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _edit__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./edit */ "./src/block/edit.js");
+/* harmony import */ var _save__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./save */ "./src/block/save.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./style.scss */ "./src/block/style.scss");
+/**
+ * WordPress dependencies
+ */
+
+/**
+ * Internal dependencies
+ */
+
+
+
+
+Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_0__["registerBlockType"])('alternative-site-logo/alternative-site-logo', {
+  edit: _edit__WEBPACK_IMPORTED_MODULE_1__["default"],
+  save: _save__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./src/block/save.js":
+/*!***************************!*\
+  !*** ./src/block/save.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return save; });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__);
+
+//import { __ } from '@wordpress/i18n';
+
+function save({
+  attributes
+}) {
+  const {
+    url
+  } = attributes;
+
+  if (!url) {
+    return null;
+  }
+
+  return (// <p { ...useBlockProps.save() }>
+    // 	{ __(
+    // 		'Alternative Site Logo – hello from the saved content!',
+    // 		'alternative-site-logo'
+    // 	) }
+    // </p>
+    Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_1__["useBlockProps"].save(), Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("img", {
+      src: url,
+      alt: ""
+    }))
+  );
+}
 
 /***/ }),
 
@@ -192,10 +324,9 @@ eval("// ESM COMPAT FLAG\n__webpack_require__.r(__webpack_exports__);\n\n// EXTE
   !*** external ["wp","blockEditor"] ***!
   \*************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-eval("(function() { module.exports = window[\"wp\"][\"blockEditor\"]; }());\n\n//# sourceURL=webpack:///external_%5B%22wp%22,%22blockEditor%22%5D?");
+(function() { module.exports = window["wp"]["blockEditor"]; }());
 
 /***/ }),
 
@@ -204,10 +335,9 @@ eval("(function() { module.exports = window[\"wp\"][\"blockEditor\"]; }());\n\n/
   !*** external ["wp","blocks"] ***!
   \********************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-eval("(function() { module.exports = window[\"wp\"][\"blocks\"]; }());\n\n//# sourceURL=webpack:///external_%5B%22wp%22,%22blocks%22%5D?");
+(function() { module.exports = window["wp"]["blocks"]; }());
 
 /***/ }),
 
@@ -216,10 +346,9 @@ eval("(function() { module.exports = window[\"wp\"][\"blocks\"]; }());\n\n//# so
   !*** external ["wp","components"] ***!
   \************************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-eval("(function() { module.exports = window[\"wp\"][\"components\"]; }());\n\n//# sourceURL=webpack:///external_%5B%22wp%22,%22components%22%5D?");
+(function() { module.exports = window["wp"]["components"]; }());
 
 /***/ }),
 
@@ -228,11 +357,11 @@ eval("(function() { module.exports = window[\"wp\"][\"components\"]; }());\n\n//
   !*** external ["wp","element"] ***!
   \*********************************/
 /*! no static exports found */
-/*! ModuleConcatenation bailout: Module is not an ECMAScript module */
 /***/ (function(module, exports) {
 
-eval("(function() { module.exports = window[\"wp\"][\"element\"]; }());\n\n//# sourceURL=webpack:///external_%5B%22wp%22,%22element%22%5D?");
+(function() { module.exports = window["wp"]["element"]; }());
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=index.js.map
